@@ -4,13 +4,13 @@ gem 'rails', github: "rails/rails"
 gem 'sprockets-rails', github: "rails/sprockets-rails"
 gem 'arel', github: "rails/arel"
 gem 'actioncable', github: 'rails/actioncable'
+gem 'coffee-rails', github: "rails/coffee-rails"
 
 gem 'sqlite3'
 gem 'puma'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', github: "rails/coffee-rails"
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'turbolinks'

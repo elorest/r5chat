@@ -10,8 +10,11 @@ br
   br
   = f.submit 'Send message'
 
+javascript:
+  var room = "#{params[:room]}"
+
 coffee:
-  App.messages = App.cable.subscriptions.create {channel: 'MessagesChannel', room: ""},
+  App.messages = App.cable.subscriptions.create {channel: 'MessagesChannel', room: room},
     received: (data) ->
       $('#messages').append @renderMessage(data)
 
