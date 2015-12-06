@@ -1,6 +1,3 @@
-= "Hello #{cookies.signed[:username].titleize} feel free to chat. :)" 
-#messages
-br
 br
 = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
   = hidden_field_tag :room, params[:room]
