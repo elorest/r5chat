@@ -1,11 +1,14 @@
 br
-= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
-  = hidden_field_tag :room, params[:room]
-  = f.label :body, 'Enter a message:'
-  br
-  = f.text_field :body
-  br
-  = f.submit 'Send message'
+form
+  = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
+    .form-group
+      = hidden_field_tag :room, params[:room]
+      = f.label :body, 'Enter a message:'
+      br
+      = f.text_field :body, class: "form-control"
+
+      br
+      = f.submit 'Send message', class: "btn btn-default"
 
 javascript:
   var room = "#{params[:room]}"

@@ -5,7 +5,7 @@ gem 'sprockets-rails', github: "rails/sprockets-rails"
 gem 'arel', github: "rails/arel"
 gem 'actioncable', github: 'rails/actioncable'
 gem 'coffee-rails', github: "rails/coffee-rails"
-
+gem 'bootstrap-sass', github: "twbs/bootstrap-sass"
 gem 'sqlite3'
 gem 'puma'
 

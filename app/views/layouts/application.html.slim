@@ -7,6 +7,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = "Hello #{cookies.signed[:username].titleize} feel free to chat. :)" if cookies.signed[:username] 
-    br
-    = yield
+    .container
+      .row
+        h6 = "Hello #{cookies.signed[:username].titleize} feel free to chat. :)" if cookies.signed[:username] 
+      .row
+        = yield

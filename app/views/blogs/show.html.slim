@@ -1,20 +1,22 @@
 p#notice = notice
 
-p
-  strong Title:
+h3
   = @blog.title
-p
-  strong Description:
+h4
   = @blog.description
 br
 
 = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
-  = hidden_field_tag :room, @blog.id 
-  = f.label :body, 'Enter a message:'
-  br
-  = f.text_field :body
-  br
-  = f.submit 'Send message'
+  .group-form
+    = hidden_field_tag :room, @blog.id 
+    = f.label :body, 'Enter a message:'
+    br
+    .row
+      .col-sm-8
+        = f.text_field :body, class: "form-control"
+      .col-sm-4
+        = f.submit 'Send message', class: "btn btn-success"
+    br
 
 #messages
 

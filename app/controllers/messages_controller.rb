@@ -3,7 +3,5 @@ class MessagesController < ApplicationController
     ActionCable.server.broadcast "messages#{params[:room]}",
       message: params[:message][:body],
       username: cookies.signed[:username]
-
-    head :ok
   end
 end

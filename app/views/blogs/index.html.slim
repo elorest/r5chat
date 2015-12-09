@@ -1,6 +1,6 @@
 h1 Listing blogs
 
-table
+table.table.table-striped
   thead
     tr
       th Title
@@ -14,10 +14,12 @@ table
       tr
         td = blog.title
         td = blog.description
-        td = link_to 'Show', blog
-        td = link_to 'Edit', edit_blog_path(blog)
-        td = link_to 'Destroy', blog, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td
+          = link_to 'Show', blog, class: "btn btn-info"
+        td = link_to 'Edit', edit_blog_path(blog), class: "btn btn-warning"
+        td = link_to 'Destroy', blog, data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-danger"
 
 br
 
-= link_to 'New Blog', new_blog_path
+.btn.btn-success
+  = link_to 'New Blog', new_blog_path
